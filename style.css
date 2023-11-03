@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html,body{
+    /* background-image: linear-gradient(135deg,orange,white,green);
+    background-attachment: fixed; */
+    
+    width: 100%;
+    height: 100%;
+}
+nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw 10vw;
+}
+nav h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+nav a{
+    letter-spacing: -.1vw;
+    opacity: 0.7;
+    font-weight: 100;
+    font-size: 1.3vw;
+    text-decoration: none;
+    color: black;
+    margin: 0 1vw;
+}
+nav i{
+    font-size: 1.9vw;
+    cursor: pointer;
+}
+nav h1{
+    font-size: 3vw;
+}
+
+main{
+    
+    width: 100%;
+    min-height: 100vh;
+   
+   
+
+}
+.hero{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+  
+    
+}
+.banner{
+    width: 100%;
+    margin-top: 8vw;
+    display: flex;
+    align-items: center;
+}
+.bimg{
+    width: 65%;
+    height: 80vh;
+}
+.bimg img{
+    opacity: 10;
+    z-index: 1000;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 75%;
+}
+.btext{
+    width: 35%;
+    padding: 0 3vw;
+}
+.btext h1{
+    font-size: 2rem;
+    letter-spacing: -.1vw;
+}
+.btext p{
+    margin-bottom: 20px;
+    width: 60%;
+}
+
+.motive{
+    margin-top: 10vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw 10vw;
+}
+.motive p{
+    line-height: 1.7;
+    letter-spacing: -.1vw;
+    width: 80%;
+    text-align: right;
+    font-size: 2vw;
+   
+   
+   
+}
+
+.motive span{
+    display: inline-block;
+    width: 8vw;
+    height: 3vw;
+    margin: 0 10px;
+    background-color: rebeccapurple;
+    border-radius: 100px;
+    margin-bottom: -1vw;
+}
+
+#spanfirst{
+   background-image: url(https://images.pexels.com/photos/3581355/pexels-photo-3581355.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+   background-position: center;
+   background-size: cover;
+}
+#spansecond{
+    background-image: url(https://images.pexels.com/photos/2450438/pexels-photo-2450438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: center;
+    background-size: cover;
+}
+#spanthird{
+    background-image: url(https://images.pexels.com/photos/40753/military-raptor-jet-f-22-airplane-40753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: center;
+   background-size: cover;
+}
+
+.future{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+}
+.future video{
+    width: 100%;
+    opacity: .1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.ftext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+}
+.ftext button{
+    padding: 1vw 1.3vw;
+    font-size: 1vw;
+    letter-spacing: -.04vw;
+    border-radius: 100px;
+    border: 1px solid rgb(211, 188, 188);
+}
+
+@media (max-width:600px){
+    nav{
+        flex-direction: column;
+        align-items: center;
+        gap: 15vw;
+    }
+    nav .left{
+        position: absolute;
+        top: 15vw;
+    }
+    nav a{
+        
+        font-size: 4vw;
+    }
+    nav i{
+        position: absolute;
+        right: 5vw;
+        top: 5.5vw;
+        font-size: 7vw;
+    }
+    nav h1{
+        top: 7vw;
+        font-size: 10vw;
+    }
+    main{
+        margin-top: 18vw;
+    }
+
+}

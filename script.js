@@ -46,3 +46,10 @@ document.querySelector(".ftext button")
     })
     
 })
+
+var cor = document.querySelector(".motive")
+var crsr=document.querySelector(".cursor")
+cor.addEventListener("mousemove",function(dets){
+    crsr.style.left=dets.x + "px"
+    crsr.style.top = dets.y - 340 + "px"
+})

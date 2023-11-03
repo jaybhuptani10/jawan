@@ -91,7 +91,10 @@ main{
     margin-top: 10vw;
     display: flex;
     justify-content: space-between;
-    padding: 3vw 10vw;
+    padding: 0vw 10vw;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
 .motive p{
     line-height: 1.7;
@@ -103,7 +106,18 @@ main{
    
    
 }
-
+.cursor{
+    height: 75px;
+    width: 95px;
+    /* background-color: red; */
+    background-image: url(gun.png);
+    background-position: center;
+    background-size: cover;
+   
+    position: absolute;
+    z-index: 9999;
+    
+}
 .motive span{
     display: inline-block;
     width: 8vw;
@@ -148,6 +162,7 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    padding: 3vw 0vw;
 }
 .ftext h1{
     font-weight: 900;

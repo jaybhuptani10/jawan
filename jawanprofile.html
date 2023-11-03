@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Jawan Profile</title>
+
+    <meta name="author" content="Codeconvey" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+    
+	    <link rel="stylesheet" href="vdan.css">
+</head>
+<body>
+
+<nav>
+    <div class="left">
+      <a class="nleft" href="index.html">Home</a>
+      <a class="nleft" href="docup.html">Documents</a>
+      <a class="nleft" href="">Employee</a>
+      <a class="nleft" href=" ">Performance Report</a>
+  </div>
+
+</nav>
+		
+<div class="ScriptTop">
+    <div class="rt-container">
+        <div class="col-rt-4" id="float-right">
+ 
+            <!-- Ad Here -->
+            
+        </div>
+
+    </div>
+</div>
+
+<header class="ScriptHeader">
+    <div class="rt-container">
+    	<div class="col-rt-12">
+        	<div class="rt-heading">
+            	<h1>Jawan Profile</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="rt-container">
+          <div class="col-rt-12">
+              <div class="Scriptcontent">
+              
+<div class="jawan-profile py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent text-center">
+            <img class="profile_img" src="Indian_BSF_Soldier.jpg" alt="student dp">
+            <h3 id="name1">Jawan</h3>
+          </div>
+          <div class="card-body"> 
+            <p class="mb-0" id="desg1"><strong class="pr-1">Rank</strong></p>
+            <p class="mb-0" id="id1"><strong class="pr-1">Department</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent border-0">
+            <h3 class="mb-0">Jawan Information</h3>
+          </div>
+          <div class="card-body pt-0">
+            <table class="table table-bordered">
+              <tr>
+                <th width="30%" >Name</th>
+                <td width="2%">:</td>
+                <td name="name" id="name">Loading...</td>
+              </tr>
+              <tr>
+                <th width="30%">Id</th>
+                <td width="2%">:</td>
+                <td name="Id" id="Id">Loading...</td>
+              </tr>
+              <tr>
+                <th width="30%">Gender</th>
+                <td width="2%">:</td>
+                <td name="Gender" id="Gender">Loading...</td>
+              </tr>
+              <tr>
+                <th width="30%">Date Of Birth</th>
+                <td width="2%">:</td>
+                <td id="DOB" >Loading...</td>
+              </tr>
+              <tr>
+                <th width="30%">Department Id</th>
+                <td width="2%">:</td>
+                <td id="Dept">Loading...</td>
+              </tr>
+              <tr>
+                <th width="30%">Salary</th>
+                <td width="2%">:</td>
+                <td id="salary">Loading...</td>
+              </tr>
+              <tr>
+                <th width="30%">Designation</th>
+                <td width="2%">:</td>
+                <td id="designation">Loading...</td>
+              </tr>
+              <tr>
+                <th width="30%">Phone Number</th>
+                <td width="2%">:</td>
+                <td id="phn">Loading...</td>
+              </tr>
+              <tr>
+                <th width="30%">E-Mail</th>
+                <td width="2%">:</td>
+                <td id="mail">Loading...</td>
+              </tr>
+              <tr>
+                <th width="30%">Education</th>
+                <td width="2%">:</td>
+                <td id="ed">Loading...</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+           
+    		</div>
+		</div>
+    </div>
+</section>
+     
+
+
+    <!-- Analytics -->
+
+	</body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+    import { getFirestore, collection, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAcB35iYH_B5Whm92Sl1SDj3t6xCjJ3i0Y",
+      authDomain: "jawan-2829e.firebaseapp.com",
+      projectId: "jawan-2829e",
+      storageBucket: "jawan-2829e.appspot.com",
+      messagingSenderId: "1060804050430",
+      appId: "1:1060804050430:web:3eadf1c96439c2dfc594af"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const itemsCollection = collection(db, 'Jawan'); // Replace with your collection name
+    const documentId = '2HZizC6VFHEmg5yMenvB'; // Replace with the document ID you want to fetch
+
+    const nameElement = document.getElementById('name');
+    const IdElement = document.getElementById('Id');
+    const GenderElement = document.getElementById('Gender');
+    const DOBElement = document.getElementById('DOB');
+    const DeptElement = document.getElementById('Dept');
+    const salaryElement = document.getElementById('salary');
+    const designationElement = document.getElementById('designation');
+    const phnElement = document.getElementById('phn');
+    const mailElement = document.getElementById('mail');
+    const edElement = document.getElementById('ed');
+
+    const name1Element = document.getElementById('name1');
+    const desg1Element = document.getElementById('desg1');
+    const id1Element = document.getElementById('id1');
+
+    const fetchData = async () => {
+        try {
+            const docSnapshot = await getDoc(doc(itemsCollection, documentId));
+            if (docSnapshot.exists()) {
+                const data = docSnapshot.data();
+                const JName = data.JName;
+                const J_ID = data.J_ID;
+                const Gender = data.Gender;
+                const DOB = data.DOB;
+                const DPT_ID = data.DPT_ID;
+                const Salary = data.Salary;
+                const desg = data.desg;
+                const phn = data.phn;
+                const Email = data.Email;
+                const edu = data.edu;
+
+    
+
+
+                // Update the "name" element in your HTML
+                nameElement.textContent = JName;
+                IdElement.textContent = J_ID;
+                GenderElement.textContent= Gender;
+                DOBElement.textContent = DOB;
+                DeptElement.textContent = DPT_ID;
+                salaryElement.textContent = Salary;
+                designationElement.textContent = desg;
+                phnElement.textContent = phn;
+                mailElement.textContent = Email;
+                edElement.textContent = edu;
+
+                name1Element.textContent = JName;
+                desg1Element.textContent = desg;
+                id1Element.textContent = J_ID;
+
+            } else {
+                nameElement.textContent = 'Data not found';
+            }
+        } catch (error) {
+            console.error('Error fetching Firestore data:', error);
+            nameElement.textContent = 'Error fetching data';
+        }
+    };
+
+    // Call the function to fetch and display Firestore data
+    fetchData();
+</script>
+</html>

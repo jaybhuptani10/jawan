@@ -53,3 +53,4 @@ cor.addEventListener("mousemove",function(dets){
     crsr.style.left=dets.x + "px"
     crsr.style.top = dets.y - 340 + "px"
 })
+

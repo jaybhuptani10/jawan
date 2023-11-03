@@ -1,0 +1,82 @@
+body {
+    background-image: linear-gradient(135deg, orange, white, green ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Lato', sans-serif;
+    margin: 100px;
+    color: #000;
+}
+
+
+
+.jawan-profile .card {
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.jawan-profile .card .card-header .profile_img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px auto;
+    border: 10px solid #ccc;
+    border-radius: 50%;
+}
+
+.jawan-profile .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.jawan-profile .card p {
+    font-size: 16px;
+    color: #000;
+}
+
+.jawan-profile .table th,
+.jawan-profile .table td {
+    font-size: 14px;
+    padding: 5px 10px;
+    color: #000;
+}
+
+
+
+nav {
+    position: absolute;
+    margin-top: 20px;
+    width: 1200px;
+    align-items: center;
+    top: 0;
+    background-image: linear-gradient(135deg, orange, white, green);
+    color: #fff;
+    text-align: center;
+    margin-bottom: 100px;
+    border-radius: 100px;
+    border: 2px solid #000; /* Add a 2px solid border with black color */
+}
+
+nav .left {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+.ScriptHeader{
+    padding: 20px;
+    padding-top: 30px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif  ;
+
+}

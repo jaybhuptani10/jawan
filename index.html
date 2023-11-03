@@ -17,13 +17,16 @@
     <nav>
         <div class="left">
             <a class="nleft" href="">Home</a>
-            <a class="nleft" href="">Documents</a>
+            <a class="nleft" href="docup.html">Documents</a>
             <a class="nleft" href="">Employee</a>
             <a class="nleft" href="">Performce Report</a>
         </div>
         <h1>Army</h1>
         <div class="right">
-            <i class="fa-solid fa-user fa-fade "></i>
+            <a href="jawanprofile.html">
+                <i  class="fa-solid fa-user fa-fade "></i>
+            </a>
+           
         </div>
         
     </nav>
@@ -102,4 +105,36 @@
     <script  type="text/javascript"  src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"></script>
     <script src="script.js"></script>
 </body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+  import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAcB35iYH_B5Whm92Sl1SDj3t6xCjJ3i0Y",
+    authDomain: "jawan-2829e.firebaseapp.com",
+    projectId: "jawan-2829e",
+    storageBucket: "jawan-2829e.appspot.com",
+    messagingSenderId: "1060804050430",
+    appId: "1:1060804050430:web:3eadf1c96439c2dfc594af"
+  };
+ 
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+// Your Firebase Auth instance
+    const auth = getAuth();
+
+    // Check if the user is authenticated
+    auth.onAuthStateChanged( (user) => {
+        if (!user) {
+            window.location.href = "user.auth.html";
+        }
+    });
+</script>
 </html>

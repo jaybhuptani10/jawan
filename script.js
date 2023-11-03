@@ -21,9 +21,28 @@ Shery.textAnimate("h1" , {
     multiplier: 0.1,
   });
 
-//   Shery.imageEffect(".bimg img", {
-//     style: 4 /*OR 5 for different variant */,
-//     debug: true,
-//   });
+  Shery.imageEffect(".bimg", {
+    style: 4 /*OR 5 for different variant */,
+    
+    gooey:true
+  });
 
 
+document.querySelector(".ftext button")
+.addEventListener("mouseover",function(){
+    
+    gsap.to(".future video",{
+        opacity:1,
+        duration:1.5,
+        ease:Power4
+    })
+})
+document.querySelector(".ftext button")
+.addEventListener("mouseleave",function(){
+    gsap.to(".future video",{
+        opacity:0,
+        duration:0.5,
+        ease:Power4
+    })
+    
+})

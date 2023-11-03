@@ -143,13 +143,18 @@ main{
 }
 .future video{
     width: 100%;
-    opacity: .1;
+    opacity: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
+.ftext h1{
+    font-weight: 900;
+    color: black;
+}
 .ftext{
+ 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,6 +162,7 @@ main{
     z-index: 9999;
 }
 .ftext button{
+    mix-blend-mode: difference;
     padding: 1vw 1.3vw;
     font-size: 1vw;
     letter-spacing: -.04vw;
